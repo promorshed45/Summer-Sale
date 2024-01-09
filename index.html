@@ -29,9 +29,8 @@
         <div class="w-9/12">
             <div>
                 <h1 class="text-4xl font-bold pl-5 py-5">Kitchenware</h1>
-
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 px-5">
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="selectCardItem(this)" class="card bg-base-100 shadow-xl cursor-pointer">
                         <figure class="bg-slate-100 py-3 mx-3 mt-3"><img src="images/prod1.png" alt="prod1" /></figure>
                         <div class="card-body text-center">
                             <div class="rating rating-md flex justify-center">
@@ -41,13 +40,13 @@
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="font-bold text-2xl text-center">K. Accessories</h2>
-                            <p>39.00 TK</p>
+                            <h2 class="item-title font-bold text-2xl text-center">K. Accessories</h2>
+                            <p class="item-price">39.00 TK</p>
 
                         </div>
                     </div>
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="selectCardItem(this)" class="card bg-base-100 shadow-xl">
                         <figure class="bg-slate-100 py-3 mx-3 mt-3"><img src="images/prod1.png" alt="prod1" /></figure>
                         <div class="card-body text-center">
                             <div class="rating rating-md flex justify-center">
@@ -57,13 +56,13 @@
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="font-bold text-2xl text-center">K. Accessories</h2>
-                            <p>39.00 TK</p>
+                            <h2 class="item-title font-bold text-2xl text-center"> DinnerSet </h2>
+                            <p class="item-price"> 25.00</p>
 
                         </div>
                     </div>
 
-                    <div class="card bg-base-100 shadow-xl">
+                    <div onclick="selectCardItem(this)" class="card bg-base-100 shadow-xl">
                         <figure class="bg-slate-100 py-3 mx-3 mt-3"><img src="images/prod1.png" alt="prod1" /></figure>
                         <div class="card-body text-center">
                             <div class="rating rating-md flex justify-center">
@@ -73,8 +72,8 @@
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                                 <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" />
                             </div>
-                            <h2 class="font-bold text-2xl text-center">K. Accessories</h2>
-                            <p>39.00 TK</p>
+                            <h2 class="item-title font-bold text-2xl text-center">Home Cooker</h2>
+                            <p class="item-price">39.00 TK</p>
 
                         </div>
                     </div>
@@ -207,11 +206,9 @@
 
             <div class="bg-white my-5 ">
                 <h1 class="h-16 pl-5 text-xl font-bold pt-3">Have a Coupon?</h1>
-                <div class="flex mx-3 pb-3 ">
-                    <ul>
-                        <li>Card Title</li>
-                        <li>Card Title</li>
-                        <li>Card Title</li>
+                <div class="flex mx-3 pb-3 pl-5">
+                    <ul id="item-list" class="list-decimal">
+
                     </ul>
                 </div>
             
@@ -219,11 +216,8 @@
             
                 <div class="flex mx-3 pb-10">
                     <div class=" border-slate-200 w-full border-b-2 pb-3 ">
-                        <ul>
-                            <li>Card Title</li>
-                            <li>Card Title</li>
-                            <li>Card Title</li>
-                        </ul>
+                        <h1>Total Price: <span id="total-price"> 00 </span> Tk</h1>
+                        <h1>Grand Total: <span id="grand-total"> 00 </span> Tk</h1>
                     </div>
                 </div>
             </div>
