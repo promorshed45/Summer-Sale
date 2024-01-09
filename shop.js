@@ -8,12 +8,26 @@ function selectCardItem(target){
     setItemList.appendChild(li);
 
     const itemPrice = parseInt(target.querySelector('.item-price').innerText);
-    const setTotalPrice = document.getElementById("total-price");
-    setTotalPrice.innerText = itemPrice;
+    // console.log(itemPrice);
 
+
+    const setTotalPrice = document.getElementById("total-price");
+    const preTotalPriceString = setTotalPrice.innerText;
+  const preTotalPrice = parseInt(preTotalPriceString);
+
+    const totalPrice = itemPrice + preTotalPrice;
+    setTotalPrice.innerText = totalPrice;
     
+
     const setGrandTotal = document.getElementById("grand-total");
-    setGrandTotal.innerText = itemPrice;
+    setGrandTotal.innerText = totalPrice;
+
+
+
+    const setDiscountPrice = document.getElementById("discount-price");
+    const discountPrice = totalPrice % 20;
+    setDiscountPrice.innerText = discountPrice;
+    
 
     
 
